@@ -7,7 +7,8 @@ $result = mysqli_query($db, $query);
 $regions = [];
 
 while ($row = mysqli_fetch_array($result, MYSQLI_NUM)) {
-	$regions += [$row[0] => [$row[1], $row[2]]];
+	// $regions += [$row[0] => [$row[1], $row[2]]];
+	$regions += [$row[0] => $row];
 }
 
 echo json_encode($regions);

@@ -13,7 +13,7 @@
 <body>
 	<div>
 		<h1>Добавление поездки</h1>
-		<form id="form1" onsubmit="onSubmit();">
+		<form id="form1">
 			<label for="regions">Регион</label>
 			<select id="regions" name="regions" onchange="onSelect();">
 				<?php
@@ -50,7 +50,7 @@
 			<label id="date_arrival">???</label>
 			<br><br>
 
-			<input type="submit" value="Добавить">
+			<input type="submit" value="Добавить" onclick="return onSubmit1();">
 		</form>
 	</div>
 	<div>
@@ -61,16 +61,12 @@
 			<label for="date_stop">Конец периода</label>
 			<input type="date" id="date_stop" name="date_stop" onchange="onDateSelect();"/>
 			<br>
-			<table id="trip_table" name="trip_table">
+			<table id="trips_table" name="trip_table">
 				<tr>
-					<td>str</td>
+					<td></td>
 				</tr>
 			</table>
-
-
-
-
-			<input type="submit" value="Обновить?" onclick="return onSubmit2();">
+			<input type="submit" value="Обновить" onclick="return onSubmit2();">
 		</form>
 	</div>
 </body>
